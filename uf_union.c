@@ -29,5 +29,13 @@ void	uf_union(t_union_find *uf, int a, int b)
 	root_b = uf_find(uf, b);
 	if (root_a == root_b)
 		return ;
-	uf->parent[root_b] = root_a;
+	if (uf->rank[root_a] < uf->rank[root_b])
+		uf->parent[root_a] = root_b;
+	else if (uf->rank[root_a] > uf->rank[root_b])
+		uf->parent[root_b] = root_a;
+	else
+	{
+		uf->parent[root_b] = root_a;
+		uf->rank[root_a]++;
+	}
 }

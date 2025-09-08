@@ -30,11 +30,12 @@ t_union_find	*uf_create(int size)
 		return (NULL);
 	uf->size = size;
 	uf->parent = (int *)malloc(sizeof(int) * size);
+	uf->rank = (int *)malloc(sizeof(int) * size);
 	i = 0;
 	while (i < size)
 	{
 		uf->parent[i] = i;
-		i++;
+		uf->rank[i++] = 0;
 	}
 	return (uf);
 }

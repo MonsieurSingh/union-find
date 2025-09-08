@@ -26,6 +26,7 @@ typedef struct s_union_find
 {
 	int		size;
 	int		*parent;
+	int		*rank;
 }	t_union_find;
 
 t_union_find	*uf_create(int size);
