@@ -31,5 +31,6 @@ typedef struct s_union_find
 t_union_find	*uf_create(int size);
 int				uf_find(t_union_find *uf, int x);
 void			uf_union(t_union_find *uf, int a, int b);
+void			uf_destroy(t_union_find *uf);
 
 #endif

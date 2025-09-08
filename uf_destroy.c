@@ -9,7 +9,7 @@
 /*           |/_____.....-----'''~~~~~~~                         ()''()-.     */
 /*      +               ·                           .---.         ;--; /      */
 /*                                                .'_:___". _..'.  __'.       */
-/*   uf_delete.c                                   |__ --==|'-''' '...;       */
+/*   uf_destroy.c                                  |__ --==|'-''' '...;       */
 /*                                                [  ]  :[|       |---\       */
 /*   By: teghjyot <teghjyot@teghjyot.com>         |__| I=[|     .'    '.      */
 /*                                                / / ____|     :       '._   */
@@ -20,7 +20,7 @@
 
 #include "union_find.h"
 
-void	uf_delete(t_union_find *uf)
+void	uf_destroy(t_union_find *uf)
 {
 	free(uf->parent);
 	free(uf);
