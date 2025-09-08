@@ -22,6 +22,7 @@
 
 void	uf_destroy(t_union_find *uf)
 {
+	free(uf->rank);
 	free(uf->parent);
 	free(uf);
 }
