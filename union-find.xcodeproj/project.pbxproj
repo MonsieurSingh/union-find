@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B30B03BA2E6F35AF0002F336 /* union_find.h in Headers */ = {isa = PBXBuildFile; fileRef = B30B03B92E6F35AF0002F336 /* union_find.h */; };
+		B30B03BA2E6F35AF0002F336 /* union_find.h in Headers */ = {isa = PBXBuildFile; fileRef = B30B03B92E6F35AF0002F336 /* union_find.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B30B03BC2E6F36460002F336 /* uf_create.c in Sources */ = {isa = PBXBuildFile; fileRef = B30B03BB2E6F36460002F336 /* uf_create.c */; };
 		B369FDB82E6F3972001824E2 /* uf_find.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDB72E6F3972001824E2 /* uf_find.c */; };
 		B369FDBA2E6F3A3E001824E2 /* uf_union.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDB92E6F3A3E001824E2 /* uf_union.c */; };
 		B369FDBC2E6F3CA1001824E2 /* uf_destroy.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDBB2E6F3CA1001824E2 /* uf_destroy.c */; };
+		B369FDE42E6F5A4C001824E2 /* libunion-find.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B30B03B12E6F35330002F336 /* libunion-find.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B369FDE52E6F5A4C001824E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B30B03A92E6F35330002F336 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B30B03B02E6F35330002F336;
+			remoteInfo = "union-find";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B30B03B12E6F35330002F336 /* libunion-find.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libunion-find.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,13 +32,30 @@
 		B369FDB72E6F3972001824E2 /* uf_find.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_find.c; sourceTree = "<group>"; };
 		B369FDB92E6F3A3E001824E2 /* uf_union.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_union.c; sourceTree = "<group>"; };
 		B369FDBB2E6F3CA1001824E2 /* uf_destroy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_destroy.c; sourceTree = "<group>"; };
+		B369FDE02E6F5A4C001824E2 /* unit_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unit_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		B369FDE12E6F5A4C001824E2 /* unit_tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = unit_tests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B30B03AF2E6F35330002F336 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B369FDDD2E6F5A4C001824E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B369FDE42E6F5A4C001824E2 /* libunion-find.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 				B369FDB72E6F3972001824E2 /* uf_find.c */,
 				B369FDB92E6F3A3E001824E2 /* uf_union.c */,
 				B369FDBB2E6F3CA1001824E2 /* uf_destroy.c */,
+				B369FDE12E6F5A4C001824E2 /* unit_tests */,
 				B30B03B22E6F35330002F336 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				B30B03B12E6F35330002F336 /* libunion-find.a */,
+				B369FDE02E6F5A4C001824E2 /* unit_tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +117,29 @@
 			productReference = B30B03B12E6F35330002F336 /* libunion-find.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B369FDDF2E6F5A4C001824E2 /* unit_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B369FDE72E6F5A4C001824E2 /* Build configuration list for PBXNativeTarget "unit_tests" */;
+			buildPhases = (
+				B369FDDC2E6F5A4C001824E2 /* Sources */,
+				B369FDDD2E6F5A4C001824E2 /* Frameworks */,
+				B369FDDE2E6F5A4C001824E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B369FDE62E6F5A4C001824E2 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B369FDE12E6F5A4C001824E2 /* unit_tests */,
+			);
+			name = unit_tests;
+			packageProductDependencies = (
+			);
+			productName = unit_tests;
+			productReference = B369FDE02E6F5A4C001824E2 /* unit_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,9 +147,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					B30B03B02E6F35330002F336 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					B369FDDF2E6F5A4C001824E2 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -116,9 +173,20 @@
 			projectRoot = "";
 			targets = (
 				B30B03B02E6F35330002F336 /* union-find */,
+				B369FDDF2E6F5A4C001824E2 /* unit_tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B369FDDE2E6F5A4C001824E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B30B03AE2E6F35330002F336 /* Sources */ = {
@@ -132,7 +200,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B369FDDC2E6F5A4C001824E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B369FDE62E6F5A4C001824E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B30B03B02E6F35330002F336 /* union-find */;
+			targetProxy = B369FDE52E6F5A4C001824E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B30B03B32E6F35330002F336 /* Debug */ = {
@@ -270,6 +353,32 @@
 			};
 			name = Release;
 		};
+		B369FDE82E6F5A4C001824E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tesingh.unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Debug;
+		};
+		B369FDE92E6F5A4C001824E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tesingh.unit-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -287,6 +396,15 @@
 			buildConfigurations = (
 				B30B03B62E6F35330002F336 /* Debug */,
 				B30B03B72E6F35330002F336 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B369FDE72E6F5A4C001824E2 /* Build configuration list for PBXNativeTarget "unit_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B369FDE82E6F5A4C001824E2 /* Debug */,
+				B369FDE92E6F5A4C001824E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
