@@ -22,7 +22,7 @@
 
 int	uf_find(t_union_find *uf, int x)
 {
-	if (uf->parent[x] == x)
-		return (x);
-	return (uf_find(uf, uf->parent[x]));
+	if (uf->parent[x] != x)
+		uf->parent[x] = uf_find(uf, x);
+	return (uf->parent[x]);
 }
