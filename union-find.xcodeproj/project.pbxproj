@@ -6,8 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B30B03BA2E6F35AF0002F336 /* union_find.h in Headers */ = {isa = PBXBuildFile; fileRef = B30B03B92E6F35AF0002F336 /* union_find.h */; };
+		B30B03BC2E6F36460002F336 /* uf_create.c in Sources */ = {isa = PBXBuildFile; fileRef = B30B03BB2E6F36460002F336 /* uf_create.c */; };
+		B369FDB82E6F3972001824E2 /* uf_find.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDB72E6F3972001824E2 /* uf_find.c */; };
+		B369FDBA2E6F3A3E001824E2 /* uf_union.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDB92E6F3A3E001824E2 /* uf_union.c */; };
+		B369FDBC2E6F3CA1001824E2 /* uf_delete.c in Sources */ = {isa = PBXBuildFile; fileRef = B369FDBB2E6F3CA1001824E2 /* uf_delete.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B30B03B12E6F35330002F336 /* libunion-find.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libunion-find.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30B03B92E6F35AF0002F336 /* union_find.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = union_find.h; sourceTree = "<group>"; };
+		B30B03BB2E6F36460002F336 /* uf_create.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_create.c; sourceTree = "<group>"; };
+		B369FDB72E6F3972001824E2 /* uf_find.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_find.c; sourceTree = "<group>"; };
+		B369FDB92E6F3A3E001824E2 /* uf_union.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_union.c; sourceTree = "<group>"; };
+		B369FDBB2E6F3CA1001824E2 /* uf_delete.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = uf_delete.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +37,11 @@
 		B30B03A82E6F35330002F336 = {
 			isa = PBXGroup;
 			children = (
+				B30B03B92E6F35AF0002F336 /* union_find.h */,
+				B30B03BB2E6F36460002F336 /* uf_create.c */,
+				B369FDB72E6F3972001824E2 /* uf_find.c */,
+				B369FDB92E6F3A3E001824E2 /* uf_union.c */,
+				B369FDBB2E6F3CA1001824E2 /* uf_delete.c */,
 				B30B03B22E6F35330002F336 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +61,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30B03BA2E6F35AF0002F336 /* union_find.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +125,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B369FDBA2E6F3A3E001824E2 /* uf_union.c in Sources */,
+				B369FDBC2E6F3CA1001824E2 /* uf_delete.c in Sources */,
+				B30B03BC2E6F36460002F336 /* uf_create.c in Sources */,
+				B369FDB82E6F3972001824E2 /* uf_find.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
