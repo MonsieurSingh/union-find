@@ -54,16 +54,51 @@
 
 - (void)test_find
 {
-
+	for (int i = 0; i < self.random_size; i++)
+	{
+		XCTAssertEqual(uf_find(self.uf, i), i,
+					   "Find operation failed");
+	}
+	XCTAssertEqual(uf_find(self.uf, self.random_size), -1,
+				   "Find operation failed for out of bounds");
 }
 
-- (void)testPerformanceExample
+- (void)test_union
 {
+	int a;
+	int b;
+	if (self.random_size < 2)
+		return;
+	a = arc4random_uniform(self.random_size);
+	b = arc4random_uniform(self.random_size);
+	while (a == b)
+		b = arc4random_uniform(self.random_size);
+	uf_union(self.uf, a, b);
+	XCTAssertEqual(uf_find(self.uf, a), uf_find(self.uf, b),
+				   "Union operation failed");
+	XCTAssertEqual(uf_find(self.uf, self.random_size), -1,
+				   "Union operation failed for out of bounds");
+}
 
-    [self measureBlock:^ {
-		
+- (void)test_performance_find
+{
+	[self measureBlock:^ {
+		for (int i = 0; i < 1000; i++) {
+			int a = arc4random_uniform(self.random_size);
+			uf_find(self.uf, a);
 		}
-	];
+	}];
+}
+
+- (void)test_performance_union
+{
+	[self measureBlock:^ {
+		for (int i = 0; i < 1000; i++) {
+			int a = arc4random_uniform(self.random_size);
+			int b = arc4random_uniform(self.random_size);
+			uf_union(self.uf, a, b);
+		}
+	}];
 }
 
 @end
